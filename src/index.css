@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --nav-soft: rgba(9, 9, 11, 0.6);
+  --nav-solid: rgba(9, 9, 11, 0.85);
+  --toggle-bg: #0b0b0f;
+  --toggle-border: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: rgba(255, 255, 255, 0.8);
+  --card-border: #e2e8f0;
+  --nav-soft: rgba(255, 255, 255, 0.82);
+  --nav-solid: rgba(255, 255, 255, 0.95);
+  --toggle-bg: #ffffff;
+  --toggle-border: #e2e8f0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+[data-theme='light'] .text-white {
+  color: #0f172a !important;
+}
+[data-theme='light'] .text-zinc-400 {
+  color: #475569 !important;
+}
+[data-theme='light'] .text-zinc-500 {
+  color: #334155 !important;
+}
+[data-theme='light'] .text-zinc-300 {
+  color: #64748b !important;
+}
+[data-theme='light'] .bg-zinc-900\/50 {
+  background-color: rgba(248, 250, 252, 0.85) !important;
+}
+[data-theme='light'] .bg-zinc-900 {
+  background-color: #e2e8f0 !important;
+}
+[data-theme='light'] .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+[data-theme='light'] .bg-zinc-950 {
+  background-color: #f8fafc !important;
+}
+[data-theme='light'] .text-emerald-400 {
+  color: #059669 !important;
+}
+
+.theme-toggle {
+  background-color: var(--toggle-bg);
+  border-color: var(--toggle-border);
+}
+[data-theme='light'] .theme-toggle:hover {
+  background-color: #e2e8f0;
+}
+[data-theme='dark'] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
