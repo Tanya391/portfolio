@@ -547,14 +547,14 @@ const Resume = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/updatedCV1.pdf"
+              href="/updatedCV.pdf"
               download
               className="w-full sm:w-auto px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
             >
               <Download size={20} className="group-hover:translate-y-1 transition-transform" /> Download CV
             </a>
             <a
-              href="/updatedCV1.pdf"
+              href="/updatedCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 border border-zinc-700 hover:border-emerald-400 text-white font-bold rounded-xl transition-all text-center"
