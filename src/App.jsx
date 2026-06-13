@@ -351,7 +351,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-zinc-400 text-sm mb-6 line-clamp-3">
+                <p className="text-zinc-400 text-sm mb-6 line-clamp-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 mt-auto">
@@ -370,7 +370,7 @@ const Projects = () => {
                   >
                     <Github size={18} /> Code
                   </a>
-                  {project.live ? (
+                  {project.live && !project.completed ? (
                     <a
                       href={project.live}
                       target="_blank"
@@ -378,6 +378,15 @@ const Projects = () => {
                       className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
                     >
                       <ExternalLink size={18} /> Live Demo
+                    </a>
+                  ) : project.live && project.completed ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
+                    >
+                      <ExternalLink size={18} /> View Project
                     </a>
                   ) : null}
                 </div>
@@ -391,7 +400,6 @@ const Projects = () => {
 };
 
 const Certifications = () => {
-  const certificatesLink = 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR';
   const items = [
     {
       title: 'DYNAMIC PROGRAMMING CAMP',
@@ -404,6 +412,12 @@ const Certifications = () => {
       issuer: 'Coursera',
       year: 'May 2026',
       link: 'https://drive.google.com/file/d/1uGD5KL5UZiCBuv21G5jygA-UJ4lJrvbB/view?usp=sharing',
+    },
+    {
+      title: 'Internship 6.0 (B 13) Plant DocBot: AI-Enabled Plant Disease Diagnosis via Chat and Image Analysis',
+      issuer: 'Infosys Springboard',
+      year: 'Apr 2026',
+      link: 'https://drive.google.com/file/d/1ktnLqmiZKV2k5cS0UMFslpsUx7ZIMwZ9/view?usp=sharing',
     },
     {
       title: 'Build Generative AI Apps with No-Code Tools',
@@ -500,7 +514,7 @@ const Experience = () => {
       period: 'Feb 2026 – Apr 2026',
       description: 'Built AI PlantDoc Bot — a full-stack plant disease diagnosis chatbot with a multi-model pipeline (ResNet-50, MobileNetV2, BERT) and Gemini conversational AI. Developed the Flask REST API and Streamlit UI, applied transfer learning and transformer fine-tuning, and containerized the entire stack with Docker and Docker-Compose for production deployment.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Gemini API', 'Flask', 'Streamlit', 'Docker'],
-      certLink: 'https://your-internship-certificate-link-here', // TODO: replace with your certificate link
+      certLink: 'https://drive.google.com/file/d/1ktnLqmiZKV2k5cS0UMFslpsUx7ZIMwZ9/view?usp=sharing', 
     },
   ];
 
