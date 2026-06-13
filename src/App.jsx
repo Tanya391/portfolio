@@ -248,7 +248,7 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
-      name: 'FinAgent – Budget Manager',
+      name: 'FinAgent',
       description: 'Full-stack AI financial intelligence platform with a query-understanding layer that routes natural language to a deterministic analytics engine or a grounded RAG pipeline. Features hybrid retrieval (vector search + metadata filtering + regex fallback), 18-category merchant classification, JWT-secured endpoints, and CI/CD via GitHub Actions.',
       tech: [
         'React 19',
@@ -273,8 +273,7 @@ const Projects = () => {
       description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      live: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      image: '/images/finagent.png',
+      image: '',
     },
     {
       name: 'UniEvent Pro',
