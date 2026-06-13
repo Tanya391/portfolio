@@ -252,8 +252,9 @@ const Projects = () => {
       description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      live: '',
+      live: 'https://github.com/Tanya391/ai_plantdoc_bot',
       image: '',
+      completed: true,
     },
     {
       name: 'FinAgent – Budget Manager',
@@ -273,8 +274,9 @@ const Projects = () => {
         'Nginx',
       ],
       github: 'https://github.com/Tanya391/finagent-ai',
-      live: '',
+      live: 'https://github.com/Tanya391/finagent-ai',
       image: '',
+      completed: true,
     },
     {
       name: 'UniEvent Pro',
@@ -330,7 +332,13 @@ const Projects = () => {
                 )}
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                {!project.live ? (
+                {project.completed ? (
+                  <div className="mb-3">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-emerald-300 bg-emerald-500/15 border border-emerald-400/30">
+                      ✓ Completed
+                    </span>
+                  </div>
+                ) : !project.live ? (
                   <div className="mb-3">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-emerald-200 bg-emerald-500/15 border border-emerald-400/30">
                       In Progress
@@ -409,6 +417,36 @@ const Certifications = () => {
       year: 'Jan 2025',
       link: 'https://drive.google.com/file/d/12JRcy4O7S62YrtSFQkxIQz2nRm_w_BAX/view?usp=drive_link',
     },
+    {
+      title: 'Certification Title 5',
+      issuer: 'Issuer Name',
+      year: '2025',
+      link: 'https://your-link-here',
+    },
+    {
+      title: 'Certification Title 6',
+      issuer: 'Issuer Name',
+      year: '2025',
+      link: 'https://your-link-here',
+    },
+    {
+      title: 'Certification Title 7',
+      issuer: 'Issuer Name',
+      year: '2025',
+      link: 'https://your-link-here',
+    },
+    {
+      title: 'Certification Title 8',
+      issuer: 'Issuer Name',
+      year: '2025',
+      link: 'https://your-link-here',
+    },
+    {
+      title: 'Certification Title 9',
+      issuer: 'Issuer Name',
+      year: '2025',
+      link: 'https://your-link-here',
+    },
   ];
 
   return (
@@ -462,6 +500,7 @@ const Experience = () => {
       period: 'Feb 2026 – Apr 2026',
       description: 'Built AI PlantDoc Bot — a full-stack plant disease diagnosis chatbot with a multi-model pipeline (ResNet-50, MobileNetV2, BERT) and Gemini conversational AI. Developed the Flask REST API and Streamlit UI, applied transfer learning and transformer fine-tuning, and containerized the entire stack with Docker and Docker-Compose for production deployment.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Gemini API', 'Flask', 'Streamlit', 'Docker'],
+      certLink: 'https://your-internship-certificate-link-here', // TODO: replace with your certificate link
     },
   ];
 
@@ -499,6 +538,18 @@ const Experience = () => {
                       {t}
                     </span>
                   ))}
+                </div>
+              )}
+              {exp.certLink && (
+                <div className="mt-5">
+                  <a
+                    href={exp.certLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-emerald-500/30 text-emerald-300 hover:text-emerald-200 hover:border-emerald-400 transition-colors text-sm font-semibold"
+                  >
+                    <FileText size={15} /> View Certificate
+                  </a>
                 </div>
               )}
             </motion.div>
