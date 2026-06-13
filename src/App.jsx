@@ -274,7 +274,7 @@ const Projects = () => {
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
       live: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      image: '',
+      image: '/images/finagent.png',
     },
     {
       name: 'UniEvent Pro',
