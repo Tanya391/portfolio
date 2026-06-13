@@ -107,11 +107,12 @@ const Hero = () => {
               <span className="text-white">Tanya</span> <span className="text-white">Bharti</span>
             </h1>
             <p className="text-xl md:text-2xl text-zinc-300 font-medium">
-              Full-Stack Developer | AI & Cloud Enthusiast
+              Full-Stack Developer &nbsp;·&nbsp; AI / ML &nbsp;·&nbsp; Cloud & DevOps
             </p>
             <p className="max-w-3xl mx-auto text-zinc-500 text-lg leading-relaxed">
-              B.Tech Computer Science student at Lovely Professional University. I focus on building scalable applications
-              and have a strong foundation in both front-end and back-end development.
+              B.Tech Computer Science student at Lovely Professional University (CGPA 7.95). I build
+              production-ready full-stack applications, AI pipelines, and containerised back-ends with
+              the MERN stack, Django REST, and Python-based ML frameworks.
             </p>
 
             <div className="flex items-center justify-center gap-6 pt-2">
@@ -189,22 +190,22 @@ const Skills = () => {
     {
       title: 'Languages',
       icon: <Terminal className="text-emerald-400" />,
-      skills: ['C','C++', 'Java', 'Python', 'JavaScript (ES6+)', 'Kotlin'],
+      skills: ['JavaScript (ES6+)', 'Python', 'C++', 'Kotlin', 'PHP', 'SQL'],
     },
     {
-      title: 'Technologies',
+      title: 'Frameworks',
       icon: <Layout className="text-emerald-400" />,
-      skills: ['React', 'Node.js', 'Express.js', 'Django', 'Tailwind CSS', 'MySQL', 'MongoDB'],
+      skills: ['React.js', 'Node.js', 'Express.js', 'Django', 'Django REST', 'Tailwind CSS'],
     },
     {
-      title: 'Tools',
+      title: 'Tools & Platforms',
       icon: <Database className="text-emerald-400" />,
-      skills: ['Git', 'GitHub', 'Android Studio', 'MongoDB Compass & Atlas', 'Postman'],
+      skills: ['MySQL', 'MongoDB', 'Docker', 'Git / GitHub', 'Postman', 'Vercel', 'Render'],
     },
     {
-      title: 'Concepts',
+      title: 'CS Fundamentals',
       icon: <Code2 className="text-emerald-400" />,
-      skills: ['OS', 'DBMS', 'OOPS', 'Data Structures & Algorithms', 'REST APIs'],
+      skills: ['DSA', 'OOP', 'Operating Systems', 'DBMS', 'REST APIs', 'CI/CD'],
     },
   ];
 
@@ -247,29 +248,29 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
-      name: 'PlantDocBot',
-      description: 'AI assistant that identifies plant diseases from images and chat inputs, with guidance on symptoms and care recommendations.',
-      tech: ['Streamlit', 'Django', 'Python', 'ResNet', 'MobileNet', 'BERT', 'REST APIs'],
+      name: 'AI PlantDoc Bot',
+      description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
+      tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
       live: '',
       image: '',
     },
     {
-      name: 'FinAgent AI',
-      description: 'AI budget tracker that helps log daily expenses, plan future budgets, and get practical saving/investing guidance with grounded answers and transparent errors.',
+      name: 'FinAgent – Budget Manager',
+      description: 'Full-stack AI financial intelligence platform with a query-understanding layer that routes natural language to a deterministic analytics engine or a grounded RAG pipeline. Features hybrid retrieval (vector search + metadata filtering + regex fallback), 18-category merchant classification, JWT-secured endpoints, and CI/CD via GitHub Actions.',
       tech: [
-        'React',
-        'Tailwind CSS',
-        'Django',
-        'Django REST Framework',
+        'React 19',
+        'Django 5.0',
+        'Django REST',
         'MongoDB',
-        'Python',
+        'Docker',
         'JWT',
         'Vector Search',
         'RAG',
-        'Groq API',
-        'Hugging Face',
         'Sentence Transformers',
+        'LLM APIs',
+        'GitHub Actions',
+        'Nginx',
       ],
       github: 'https://github.com/Tanya391/finagent-ai',
       live: '',
@@ -277,8 +278,8 @@ const Projects = () => {
     },
     {
       name: 'UniEvent Pro',
-      description: 'Campus event management platform with student and admin portals, one-click registrations, live announcements, and engagement analytics.',
-      tech: ['React', 'Vite', 'React Router', 'Recharts', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      description: 'Event management portal with React, Node.js, Express, and MongoDB. Includes JWT authentication, role-based access control, real-time notifications via Nodemailer, a Recharts analytics dashboard, Multer file uploads, and zero-downtime deployments on Vercel with a full CI/CD pipeline.',
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'RBAC', 'Nodemailer', 'Recharts', 'Multer', 'Helmet', 'Vercel'],
       github: 'https://github.com/Tanya391/UniEvent-Pro',
       live: 'https://uni-event-pro.vercel.app/',
       image: '/images/unievent-pro.png',
@@ -385,10 +386,16 @@ const Certifications = () => {
   const certificatesLink = 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR';
   const items = [
     {
-      title: 'Cloud Computing',
-      issuer: 'NPTEL | IIT Kharagpur',
-      year: 'Jan 2025',
-      link: 'https://drive.google.com/file/d/12JRcy4O7S62YrtSFQkxIQz2nRm_w_BAX/view?usp=drive_link',
+      title: 'Build Generative AI Apps with No-Code Tools',
+      issuer: 'Infosys Springboard',
+      year: 'Aug 2025',
+      link: 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR',
+    },
+    {
+      title: 'Prompt Engineering: ChatGPT, Generative AI & LLM',
+      issuer: 'Infosys Springboard',
+      year: 'Aug 2025',
+      link: 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR',
     },
     {
       title: 'Mastering DSA in C++',
@@ -397,10 +404,10 @@ const Certifications = () => {
       link: 'https://drive.google.com/file/d/1IuVlUQYFu7TB9psztZ7F6zJLowbWUI2w/view?usp=drive_link',
     },
     {
-      title: 'MongoDB Skill-a-thon',
-      issuer: 'MongoDB',
-      year: 'Jul 2025',
-      link: 'https://drive.google.com/file/d/1xfgBV057XJMeIoa7XKvpxf9d5ctGHBr7/view?usp=drive_link',
+      title: 'Cloud Computing',
+      issuer: 'NPTEL | IIT Kharagpur',
+      year: 'Jan 2025',
+      link: 'https://drive.google.com/file/d/12JRcy4O7S62YrtSFQkxIQz2nRm_w_BAX/view?usp=drive_link',
     },
   ];
 
@@ -452,8 +459,9 @@ const Experience = () => {
     {
       company: 'Infosys Springboard',
       role: 'AI Intern',
-      period: 'Feb 11, 2026 - Ongoing (8 weeks)',
-      description: 'Building PlantDocBot, an AI assistant that diagnoses plant diseases from user chat and image uploads.',
+      period: 'Feb 2026 – Apr 2026',
+      description: 'Built AI PlantDoc Bot — a full-stack plant disease diagnosis chatbot with a multi-model pipeline (ResNet-50, MobileNetV2, BERT) and Gemini conversational AI. Developed the Flask REST API and Streamlit UI, applied transfer learning and transformer fine-tuning, and containerized the entire stack with Docker and Docker-Compose for production deployment.',
+      tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Gemini API', 'Flask', 'Streamlit', 'Docker'],
     },
   ];
 
@@ -484,6 +492,15 @@ const Experience = () => {
               <p className="text-zinc-400 leading-relaxed">
                 {exp.description}
               </p>
+              {exp.tech && (
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {exp.tech.map((t) => (
+                    <span key={t} className="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono rounded-md">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -494,8 +511,10 @@ const Experience = () => {
 
 const Achievements = () => {
   const achievements = [
-    { title: 'LeetCode Contest Rank', detail: 'Highest contest ranking achieved: 1409.' },
-    { title: '300+ DSA Problems Solved', detail: 'Solved 300+ questions across GFG, LeetCode, and Hackerrank.' },
+    { title: 'LeetCode Peak Rating: 1409', detail: 'Reached a peak LeetCode contest rating of 1409, showcasing competitive programming strength.' },
+    { title: '200+ DSA Problems Solved', detail: 'Solved 200+ coding problems across LeetCode, HackerRank, and Codeforces.' },
+    { title: 'HackerRank Badges', detail: '3-star badge in Python and 2-star badge in Problem Solving on HackerRank.' },
+    { title: 'Dynamic Programming Camp', detail: 'Completed the Dynamic Programming Camp organised by Algo University.' },
   ];
 
   return (
