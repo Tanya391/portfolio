@@ -266,7 +266,7 @@ const Projects = () => {
       ],
       github: 'https://github.com/Tanya391/finagent-ai',
       live: 'https://finagent-ui.onrender.com/',
-      image: '',
+      image: '/images/finagent.png',
     },
     {
       name: 'AI PlantDoc Bot',
