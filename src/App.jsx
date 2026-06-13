@@ -273,7 +273,7 @@ const Projects = () => {
       description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      live: '',
+      live: 'https://github.com/Tanya391/ai_plantdoc_bot',
       image: '',
     },
     {
@@ -369,7 +369,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
                     >
-                      <ExternalLink size={18} /> Live Demo
+                      <ExternalLink size={18} /> {project.live === project.github ? 'View Repo' : 'Live Demo'}
                     </a>
                   ) : null}
                 </div>
