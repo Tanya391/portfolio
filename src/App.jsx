@@ -248,15 +248,6 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
-      name: 'AI PlantDoc Bot',
-      description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
-      tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
-      github: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      live: 'https://github.com/Tanya391/ai_plantdoc_bot',
-      image: '',
-      completed: true,
-    },
-    {
       name: 'FinAgent – Budget Manager',
       description: 'Full-stack AI financial intelligence platform with a query-understanding layer that routes natural language to a deterministic analytics engine or a grounded RAG pipeline. Features hybrid retrieval (vector search + metadata filtering + regex fallback), 18-category merchant classification, JWT-secured endpoints, and CI/CD via GitHub Actions.',
       tech: [
@@ -274,9 +265,16 @@ const Projects = () => {
         'Nginx',
       ],
       github: 'https://github.com/Tanya391/finagent-ai',
-      live: 'https://github.com/Tanya391/finagent-ai',
+      live: 'https://finagent-ui.onrender.com/',
       image: '',
-      completed: true,
+    },
+    {
+      name: 'AI PlantDoc Bot',
+      description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
+      tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
+      github: 'https://github.com/Tanya391/ai_plantdoc_bot',
+      live: '',
+      image: '',
     },
     {
       name: 'UniEvent Pro',
@@ -332,13 +330,7 @@ const Projects = () => {
                 )}
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                {project.completed ? (
-                  <div className="mb-3">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-emerald-300 bg-emerald-500/15 border border-emerald-400/30">
-                      ✓ Completed
-                    </span>
-                  </div>
-                ) : !project.live ? (
+                {!project.live ? (
                   <div className="mb-3">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-emerald-200 bg-emerald-500/15 border border-emerald-400/30">
                       In Progress
@@ -370,7 +362,7 @@ const Projects = () => {
                   >
                     <Github size={18} /> Code
                   </a>
-                  {project.live && !project.completed ? (
+                  {project.live ? (
                     <a
                       href={project.live}
                       target="_blank"
@@ -378,15 +370,6 @@ const Projects = () => {
                       className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
                     >
                       <ExternalLink size={18} /> Live Demo
-                    </a>
-                  ) : project.live && project.completed ? (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
-                    >
-                      <ExternalLink size={18} /> View Project
                     </a>
                   ) : null}
                 </div>
