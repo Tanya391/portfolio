@@ -394,16 +394,40 @@ const Certifications = () => {
   const certificatesLink = 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR';
   const items = [
     {
+      title: 'DYNAMIC PROGRAMMING CAMP',
+      issuer: 'AlgoUniversity',
+      year: 'April 2026',
+      link: 'https://drive.google.com/file/d/1ElyxL5gF3yuo-Rmn4soOrkFPn7GGsSMF/view?usp=sharing',
+    },
+    {
+      title: 'Master Full-Stack Web Development with Laravel & PHP',
+      issuer: 'Coursera',
+      year: 'May 2026',
+      link: 'https://drive.google.com/file/d/1uGD5KL5UZiCBuv21G5jygA-UJ4lJrvbB/view?usp=sharing',
+    },
+    {
       title: 'Build Generative AI Apps with No-Code Tools',
       issuer: 'Infosys Springboard',
-      year: 'Aug 2025',
+      year: 'August 2025',
       link: 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR',
     },
     {
       title: 'Prompt Engineering: ChatGPT, Generative AI & LLM',
       issuer: 'Infosys Springboard',
-      year: 'Aug 2025',
+      year: 'August 2025',
       link: 'https://drive.google.com/drive/folders/1B-DySjgM6hLWowaK--oWUcnPGHsumHjR',
+    },
+    {
+      title: 'ChatGPT-4 Prompt Engineering: ChatGPT, Generative Al & LLM',
+      issuer: 'Infosys Springboard',
+      year: 'August 2025',
+      link: 'https://drive.google.com/file/d/1-nDgH9LdsWy9EXAggU2Wf-dchlUjF_6x/view?usp=sharing',
+    },
+    {
+      title: 'Computational Theory: Language Principle & Finite Automata Theory',
+      issuer: 'Infosys Springboard',
+      year: 'August 2025',
+      link: 'https://drive.google.com/file/d/1jipRt_ankgKyfuyE-7ubi6FUOPpX1AYI/view?usp=sharing',
     },
     {
       title: 'Mastering DSA in C++',
@@ -418,35 +442,11 @@ const Certifications = () => {
       link: 'https://drive.google.com/file/d/12JRcy4O7S62YrtSFQkxIQz2nRm_w_BAX/view?usp=drive_link',
     },
     {
-      title: 'Certification Title 5',
-      issuer: 'Issuer Name',
-      year: '2025',
-      link: 'https://your-link-here',
-    },
-    {
-      title: 'Certification Title 6',
-      issuer: 'Issuer Name',
-      year: '2025',
-      link: 'https://your-link-here',
-    },
-    {
-      title: 'Certification Title 7',
-      issuer: 'Issuer Name',
-      year: '2025',
-      link: 'https://your-link-here',
-    },
-    {
-      title: 'Certification Title 8',
-      issuer: 'Issuer Name',
-      year: '2025',
-      link: 'https://your-link-here',
-    },
-    {
-      title: 'Certification Title 9',
-      issuer: 'Issuer Name',
-      year: '2025',
-      link: 'https://your-link-here',
-    },
+      title: 'Java',
+      issuer: 'iamneo',
+      year: 'May 2024',
+      link: 'https://drive.google.com/file/d/1CJ4PZws6oIp6xqJPTDPfqN02BTfqjuEj/view?usp=sharing',
+    }
   ];
 
   return (
@@ -617,14 +617,15 @@ const Resume = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/updatedCV.pdf"
-              download
+              href="https://drive.google.com/uc?export=download&id=1O-qpI6BuUoF6hln-ro6gaZMGXdZJRI1F"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
             >
               <Download size={20} className="group-hover:translate-y-1 transition-transform" /> Download CV
             </a>
             <a
-              href="/updatedCV.pdf"
+              href="https://drive.google.com/file/d/1O-qpI6BuUoF6hln-ro6gaZMGXdZJRI1F/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 border border-zinc-700 hover:border-emerald-400 text-white font-bold rounded-xl transition-all text-center"
