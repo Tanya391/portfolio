@@ -270,6 +270,15 @@ const Projects = () => {
         'React Router',
       ],
       github: 'https://github.com/Tanya391/CareerAutomationHub',
+      live: 'https://github.com/Tanya391/CareerAutomationHub',
+      image: '',
+    },
+    {
+      name: 'Saathi Wellness Community',
+      description: 'Full-stack wellness community platform with user authentication, community posts, comments, likes, bookmarks, and personalized dashboards. Implemented secure authentication, CRUD operations, and role-based authorization for seamless content management. Enhanced user engagement with real-time AJAX likes, bookmarks, search, category filters, and wellness resources backed by efficient MongoDB data management.',
+      tech: ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'Laravel 13', 'MongoDB', 'JWT', 'AJAX', 'REST API'],
+      github: 'https://github.com/Tanya391/SaathiWellnessCommunity',
+      live: 'https://github.com/Tanya391/SaathiWellnessCommunity',
       image: '',
     },
     {
@@ -298,6 +307,7 @@ const Projects = () => {
       description: 'Full-stack AI plant disease diagnosis chatbot with a multi-model detection pipeline (ResNet-50, MobileNetV2, BERT), Flask REST API, Streamlit UI, and Docker containerization. Integrates CNN image classification, BERT text diagnosis, and Gemini conversational AI.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Transformers', 'Streamlit', 'Flask', 'REST API', 'Gemini API', 'Docker'],
       github: 'https://github.com/Tanya391/ai_plantdoc_bot',
+      live: 'https://github.com/Tanya391/ai_plantdoc_bot',
       image: '',
     },
     {
