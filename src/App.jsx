@@ -246,6 +246,8 @@ const Skills = () => {
 };
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       name: 'CareerAutomationHub',
@@ -377,17 +379,22 @@ const Projects = () => {
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-400 transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-zinc-400 text-sm mb-6 line-clamp-4">
+                <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6 mt-auto">
-                  {project.tech.map((t) => (
+                <div className="flex flex-wrap gap-2 mb-4 mt-auto">
+                  {project.tech.slice(0, 4).map((t) => (
                     <span key={t} className="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono rounded-md">
                       {t}
                     </span>
                   ))}
+                  {project.tech.length > 4 && (
+                    <span className="px-2 py-1 bg-zinc-700/50 text-zinc-400 text-xs font-mono rounded-md">
+                      +{project.tech.length - 4} more
+                    </span>
+                  )}
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 flex-wrap">
                   <a
                     href={project.github}
                     target="_blank"
@@ -406,12 +413,111 @@ const Projects = () => {
                       <ExternalLink size={18} /> {project.live === project.github ? 'View Repo' : 'Live Demo'}
                     </a>
                   ) : null}
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="ml-auto text-xs font-semibold text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 hover:border-emerald-400 px-3 py-1.5 rounded-lg transition-colors"
+                  >
+                    Show More
+                  </button>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 40, scale: 0.96 }}
+            transition={{ duration: 0.25 }}
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl glass border border-emerald-500/20 p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-700/50 transition-colors"
+              aria-label="Close"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Image / gradient banner */}
+            <div className="h-44 rounded-xl overflow-hidden mb-6">
+              {selectedProject.image ? (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.name}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                <div className={`w-full h-full bg-gradient-to-br ${placeholderGradients[projects.indexOf(selectedProject) % placeholderGradients.length]} flex items-center justify-center`}>
+                  <span className="text-xl font-bold text-emerald-100/80">{selectedProject.name}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Status badge */}
+            {!selectedProject.live && (
+              <span className="inline-flex items-center mb-3 px-3 py-1 rounded-full text-xs font-semibold text-emerald-200 bg-emerald-500/15 border border-emerald-400/30">
+                In Progress
+              </span>
+            )}
+
+            <h2 className="text-2xl font-bold text-white mb-4">{selectedProject.name}</h2>
+
+            <p className="text-zinc-300 text-sm leading-relaxed mb-6">
+              {selectedProject.description}
+            </p>
+
+            {/* Full tech stack */}
+            <div className="mb-6">
+              <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-widest mb-3">Tech Stack</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.tech.map((t) => (
+                  <span key={t} className="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono rounded-md">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 hover:border-emerald-400 text-zinc-300 hover:text-white text-sm font-medium transition-colors"
+              >
+                <Github size={16} /> View Code
+              </a>
+              {selectedProject.live && selectedProject.live !== selectedProject.github && (
+                <a
+                  href={selectedProject.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-zinc-950 text-sm font-bold transition-colors"
+                >
+                  <ExternalLink size={16} /> Live Demo
+                </a>
+              )}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   );
 };
