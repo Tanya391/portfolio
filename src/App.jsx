@@ -248,6 +248,31 @@ const Skills = () => {
 const Projects = () => {
   const projects = [
     {
+      name: 'CareerAutomationHub',
+      description: 'Intelligent career automation platform that dynamically scrapes real-time job postings by bypassing advanced bot protections using stealth-enabled headless browsers. Integrates Google Gemini LLM as a fallback parsing engine to extract and normalize unstructured webpage data into structured JSON. Features automated resume parsing, skill-based job matching algorithms, and a Kanban tracking board with email alerts for high-match opportunities.',
+      tech: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MySQL',
+        'Tailwind CSS',
+        'Playwright',
+        'Playwright-Extra',
+        'Puppeteer-Extra-Plugin-Stealth',
+        'Google Gemini API',
+        'JWT',
+        'Bcrypt',
+        'Multer',
+        'PDF-Parse',
+        'Node-Cron',
+        'Nodemailer',
+        'Axios',
+        'React Router',
+      ],
+      github: 'https://github.com/Tanya391/CareerAutomationHub',
+      image: '',
+    },
+    {
       name: 'FinAgent',
       description: 'Full-stack AI financial intelligence platform with a query-understanding layer that routes natural language to a deterministic analytics engine or a grounded RAG pipeline. Features hybrid retrieval (vector search + metadata filtering + regex fallback), 18-category merchant classification, JWT-secured endpoints, and CI/CD via GitHub Actions.',
       tech: [
@@ -559,7 +584,7 @@ const Experience = () => {
 const Achievements = () => {
   const achievements = [
     { title: 'LeetCode Peak Rating: 1409', detail: 'Reached a peak LeetCode contest rating of 1409, showcasing competitive programming strength.' },
-    { title: '200+ DSA Problems Solved', detail: 'Solved 200+ coding problems across LeetCode, HackerRank, and Codeforces.' },
+    { title: '250+ DSA Problems Solved', detail: 'Solved 250+ coding problems across LeetCode, HackerRank, and Codeforces.' },
     { title: 'HackerRank Badges', detail: '3-star badge in Python and 2-star badge in Problem Solving on HackerRank.' },
     { title: 'Dynamic Programming Camp', detail: 'Completed the Dynamic Programming Camp organised by Algo University.' },
   ];
@@ -613,7 +638,7 @@ const Resume = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://drive.google.com/uc?export=download&id=1O-qpI6BuUoF6hln-ro6gaZMGXdZJRI1F"
+              href="https://drive.google.com/uc?export=download&id=1IFfsPKqjbRhWbcw7-iybK4vKeL84Ga4o"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
@@ -621,7 +646,7 @@ const Resume = () => {
               <Download size={20} className="group-hover:translate-y-1 transition-transform" /> Download CV
             </a>
             <a
-              href="https://drive.google.com/file/d/1O-qpI6BuUoF6hln-ro6gaZMGXdZJRI1F/view?usp=sharing"
+              href="https://drive.google.com/file/d/1IFfsPKqjbRhWbcw7-iybK4vKeL84Ga4o/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-10 py-4 border border-zinc-700 hover:border-emerald-400 text-white font-bold rounded-xl transition-all text-center"
