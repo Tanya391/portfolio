@@ -250,6 +250,59 @@ const Projects = () => {
 
   const projects = [
     {
+      name: 'Email Job Scheduler',
+      description: 'A production-grade full-stack email job scheduler built as a monorepo. Features an email scheduling API with CSV list parsing, BullMQ delayed jobs, restart persistence, hourly rate limiting with Redis Lua counters, and real Google OAuth 2.0 integration.',
+      tech: [
+        'React',
+        'TypeScript',
+        'Tailwind CSS',
+        'Express.js',
+        'BullMQ',
+        'Redis',
+        'Prisma ORM',
+        'MySQL',
+        'Docker',
+        'OAuth 2.0',
+      ],
+      github: 'https://github.com/Tanya391',
+      live: '',
+      image: '',
+    },
+    {
+      name: 'Luma',
+      description: 'A concept for an AI-powered furniture discovery platform that helps people find pieces that fit their space using a room\'s context. Features a custom-built Before/After slider, a responsive "Shop the Look" gallery, dynamic image focal points, and complete dark-mode support.',
+      tech: [
+        'React 19',
+        'Vite',
+        'Tailwind CSS',
+        'Lucide React',
+        'JavaScript',
+      ],
+      github: 'https://github.com/Tanya391',
+      live: 'https://luma-furnitures.netlify.app/',
+      image: '',
+    },
+    {
+      name: 'ShopAssist AI',
+      description: 'An intelligent, AI-powered e-commerce customer support platform featuring Retrieval-Augmented Generation (RAG), Agentic Tool Calling, and Role-Based Access Control (RBAC). Utilizes advanced AI orchestration to read company policies from a vector database and interact with PostgreSQL to provide seamless customer support.',
+      tech: [
+        'React 19',
+        'Vite',
+        'Tailwind CSS',
+        'Node.js',
+        'Express.js',
+        'Prisma ORM',
+        'Neon',
+        'Google Gemini',
+        'LangGraph JS',
+        'Pinecone',
+        'JWT',
+      ],
+      github: 'https://github.com/Tanya391/ShopAssist',
+      live: 'https://shop-assist-alpha.vercel.app/',
+      image: '',
+    },
+    {
       name: 'CareerAutomationHub',
       description: 'Intelligent career automation platform that dynamically scrapes real-time job postings by bypassing advanced bot protections using stealth-enabled headless browsers. Integrates Google Gemini LLM as a fallback parsing engine to extract and normalize unstructured webpage data into structured JSON. Features automated resume parsing, skill-based job matching algorithms, and a Kanban tracking board with email alerts for high-match opportunities.',
       tech: [
@@ -301,7 +354,7 @@ const Projects = () => {
         'Nginx',
       ],
       github: 'https://github.com/Tanya391/finagent-ai',
-      live: 'https://finagent-ui.onrender.com/',
+      live: 'https://finagent-ui-8j4s.onrender.com',
       image: '/images/finagent.png',
     },
     {
@@ -540,7 +593,7 @@ const Certifications = () => {
       title: 'Internship 6.0 (B 13) Plant DocBot: AI-Enabled Plant Disease Diagnosis via Chat and Image Analysis',
       issuer: 'Infosys Springboard',
       year: 'Apr 2026',
-      link: 'https://drive.google.com/file/d/1ktnLqmiZKV2k5cS0UMFslpsUx7ZIMwZ9/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/15Nrbp1ltazEGbtSkkQ4f4j4VRjPMNUxI/view',
     },
     {
       title: 'Build Generative AI Apps with No-Code Tools',
@@ -637,7 +690,7 @@ const Experience = () => {
       period: 'Feb 2026 – Apr 2026',
       description: 'Built AI PlantDoc Bot — a full-stack plant disease diagnosis chatbot with a multi-model pipeline (ResNet-50, MobileNetV2, BERT) and Gemini conversational AI. Developed the Flask REST API and Streamlit UI, applied transfer learning and transformer fine-tuning, and containerized the entire stack with Docker and Docker-Compose for production deployment.',
       tech: ['Python', 'PyTorch', 'ResNet-50', 'MobileNetV2', 'BERT', 'Gemini API', 'Flask', 'Streamlit', 'Docker'],
-      certLink: 'https://drive.google.com/file/d/1ktnLqmiZKV2k5cS0UMFslpsUx7ZIMwZ9/view?usp=sharing', 
+      certLink: 'https://drive.google.com/file/d/15Nrbp1ltazEGbtSkkQ4f4j4VRjPMNUxI/view', 
     },
   ];
 
